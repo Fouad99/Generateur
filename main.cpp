@@ -72,7 +72,7 @@ int main(int argc, char const *argv[]) {
 
   file.open("./test" + std::to_string(nbrDate)+"-"+ std::to_string(nbrQuartier)+"-"+ std::to_string(nbrFoyer)+".txt");
   std::cout << "Fichier en cours de generation.." << std::endl;
-  estVille(file,nbrDate,nbrQuartier,nbrFoyer);
+  testVille(file,nbrDate,nbrQuartier,nbrFoyer);
   std::cout << ".." << std::endl;
   std::cout << "Fichier de test produit." << std::endl;
   file.close();
