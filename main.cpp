@@ -27,9 +27,9 @@ void implementerFoyer(ofstream& file, int nbrFoyer){
   int id, revenu, nbrPersonne;
 
   for (int i = 1; i <= nbrFoyer; i++ ){
-    id = (rand() % 9000 ) + 1000;
+    id = (rand() % 200 ) + 1000;
     revenu = ( rand() % 95000 ) + 5000;
-    nbrPersonne = ( rand() % 8 ) + 1;
+    nbrPersonne = ( rand() % 19 ) + 1;
 
     file << id << "  " << revenu << " " << nbrPersonne << std::endl;
   }
@@ -45,9 +45,10 @@ void implementerQuartier(ofstream& file, int nbrQuartier, int nbrFoyer){
 }
 
 void testVille(ofstream& file, int nbrDate, int nbrQuartier, int nbrFoyer){
-  int annee,mois,jours;
+  int annee = 2000;
+  int mois,jours;
   for(int i = 1; i <= nbrDate; i++){
-    annee = (rand() % 15) + 2010;
+    annee = annee + 1;
     mois = (rand() % 12) + 1;
     jours = (rand() % 28) + 1;
     file << "DATE " << annee << "-" << mois << "-" << jours << std::endl;
